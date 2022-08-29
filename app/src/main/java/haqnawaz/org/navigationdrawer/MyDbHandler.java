@@ -176,7 +176,7 @@ class DbHelper extends SQLiteOpenHelper {
         String select_query = "SELECT * FROM " + " tayah where FatehMuhammadJalandhrield Like '%"+input +"%' OR DrMohsinKhan LIKE '%"+input +"%' OR ArabicText LIKE '%"+input+"%'";
         Log.d("input", input);
         Cursor cursor=db.rawQuery(select_query,null);
-        int count=0;
+        int count = 0;
         if(cursor.moveToFirst()){
             do {
                 if(cursor!=null)
