@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200">
+    android:background="@color/teal_200"
+    android:orientation="vertical">
 
     <ImageView
         android:layout_width="125dp"
         android:layout_height="125dp"
-        android:background="@color/teal_200"
-        android:src="@drawable/local_library" />
+        android:background="@color/black"
+        android:src="@drawable/quranicon" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,6 +17,6 @@
         android:text="Quran App"
         android:textAlignment="center"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold|italic" />
 
 </LinearLayout>

@@ -20,9 +20,9 @@ public class BookActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
-        Toast.makeText(getApplicationContext(),"Retur is Clicked",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"ALL SURAH",Toast.LENGTH_LONG).show();
         DbHelper db= new DbHelper(BookActivity.this);
-        lv=findViewById(R.id.SurahNames);
+        lv = findViewById(R.id.SurahNames);
         List<String> surahNames=  db.getAllSurah();
         ArrayAdapter<String> AA= new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,surahNames);
         lv.setAdapter(AA);
@@ -34,6 +34,5 @@ public class BookActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }

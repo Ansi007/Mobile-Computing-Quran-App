@@ -14,13 +14,12 @@
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/toolbar"
-            app:title="Navigation Drawer Demo"
-            app:titleTextColor="@color/cardview_light_background"
             android:background="@color/cardview_dark_background"
-            />
+            app:title="QURAN APP"
+            app:titleTextColor="@color/cardview_light_background" />
 
     </RelativeLayout>
 

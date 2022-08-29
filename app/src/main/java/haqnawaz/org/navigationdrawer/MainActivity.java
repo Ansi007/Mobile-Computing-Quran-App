@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId())
                 {
                     case R.id.nav_Quran:
-                        Toast.makeText(getApplicationContext(),"Arabic Quran",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"ALL SURAH",Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(MainActivity.this, BookActivity.class);
                         startActivity(intent);
                         //drawerLayout.closeDrawer(GravityCompat.START);
