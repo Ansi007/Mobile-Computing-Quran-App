@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Searching">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="248dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="82dp"
+        android:text="Type Word Or Sentence then click Search"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Input"
+        android:layout_width="244dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="93dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Word"
+        android:textIsSelectable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/Search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="456dp"
+        android:text="Search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
