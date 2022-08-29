@@ -14,46 +14,43 @@ public class Searching extends AppCompatActivity {
 EditText Input;
 Button Search;
 TextView tv;
+TextView tv2;
+TextView tv3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_searching);
         Intent intent3= new Intent(Searching.this,SearchResult.class);
-        Intent i=getIntent();
+        Intent i = getIntent();
         String values=i.getStringExtra("Search");
-        Input=findViewById(R.id.Input);
-        Search=findViewById(R.id.Search);
-        tv=findViewById(R.id.textView);
+        Input = findViewById(R.id.Input);
+        Search = findViewById(R.id.Search);
+        tv = findViewById(R.id.textView);
+        tv2 = findViewById(R.id.textView2);
+        tv3 = findViewById(R.id.textView3);
+
         switch (values){
             case "Search":
-
                 break;
             case "ByParaNo":
-                tv.setText("Enter para no:");
-                Input.setText("Number 0 -30");
-
-                    break;
-            case "ByRukuNo":
-                tv.setText("Enter Ruku No:");
-                Input.setText("Number 1-558");
+                tv.setText("Enter Parah Number (1 - 30): ");
+                tv2.setText("پارہ نمبر (1 - 30) درج کریں:");
+                tv3.setText("أدخل رقم باراه (1 - 30):");
                 break;
             case "BySurahNo":
-                tv.setText("Enter Surah No");
-                Input.setText("Number 1-114");
+                tv.setText("Enter Surah Number (1 - 114): ");
+                tv2.setText("سورہ نمبر (1 - 114) درج کریں:");
+                tv3.setText("أدخل رقم السورة (1-114):");
                 break;
         }
         Search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String input=Input.getText().toString();
-
-
                 intent3.putExtra("Input",input);
                 intent3.putExtra("Search",values);
                 startActivity(intent3);
             }
         });
-
-
     }
 }

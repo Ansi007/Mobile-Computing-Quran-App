@@ -59,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         //drawerLayout.closeDrawer(GravityCompat.START);
                         break;
+                    case R.id.nav_Parah:
+                        Toast.makeText(getApplicationContext(),"ALL PARAH",Toast.LENGTH_LONG).show();
+                        Intent intent1 = new Intent(MainActivity.this, ParahActivity.class);
+                        startActivity(intent1);
+                        //drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
                     case R.id.nav_return :
                         Toast.makeText(getApplicationContext(),"Searching",Toast.LENGTH_LONG).show();
                         Intent intent2 = new Intent(MainActivity.this, Searching.class);
@@ -71,12 +77,12 @@ public class MainActivity extends AppCompatActivity {
                         intent3.putExtra("Search","ByParaNo");
                         startActivity(intent3);
                         break;
-                    case R.id.nav_SearchByRukuNo:
-                        Toast.makeText(getApplicationContext(),"Searching",Toast.LENGTH_LONG).show();
-                        Intent intent4 = new Intent(MainActivity.this, Searching.class);
-                        intent4.putExtra("Search","ByRukuNo");
-                        startActivity(intent4);
-                        break;
+//                    case R.id.nav_SearchByRukuNo:
+//                        Toast.makeText(getApplicationContext(),"Searching",Toast.LENGTH_LONG).show();
+//                        Intent intent4 = new Intent(MainActivity.this, Searching.class);
+//                        intent4.putExtra("Search","ByRukuNo");
+//                        startActivity(intent4);
+//                        break;
                     case R.id.nav_SearchBySurahNo:
                         Toast.makeText(getApplicationContext(),"Searching",Toast.LENGTH_LONG).show();
                         Intent intent5 = new Intent(MainActivity.this, Searching.class);

@@ -22,21 +22,9 @@ class DbHelper extends SQLiteOpenHelper {
 
     private final static String DB_PATH = "/data/data/[YOUR PACKAGE HERE]/databases/";
 
-   public String dbName="QuranDb.db";
+    public String dbName="QuranDb.db";
     public Context mycontext;
-
     public File dbFile;
-
-//    Context mcontext;
-//    String dbName;
-//    String dbPath;
-
-//    public DbHelper(Context context) {
-//        super(context, "QuranDb.db", null,2);
-//        this.mcontext = context;
-//        dbName="QuranDb.db";
-//        dbPath = "/data/data/" + "com.example.quranapp" + "/databases";
-//    }
 
     public DbHelper(Context context) {
         super(context, "QuranDb.db", null, 2);
@@ -70,11 +58,11 @@ class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
 
-    private void copyDataBase(String dbPath){
-        try{
+    private void copyDataBase(String dbPath) {
+        try {
             InputStream assestDB = mycontext.getAssets().open(dbName);
 
-            OutputStream appDB = new FileOutputStream(dbPath,false);
+            OutputStream appDB = new FileOutputStream(dbPath, false);
 
             byte[] buffer = new byte[1024];
             int length;
@@ -85,71 +73,11 @@ class DbHelper extends SQLiteOpenHelper {
             appDB.flush();
             appDB.close();
             assestDB.close();
-        }catch(IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
-
-
-
-
-
-//    public void checkDb() {
-//        SQLiteDatabase checkDb = null;
-//        String filepath = dbPath + dbName;
-//        try {
-//            checkDb = SQLiteDatabase.openDatabase(filepath, null, 0);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        if (checkDb != null) {
-//            Toast.makeText(mcontext, "Database already exists", Toast.LENGTH_SHORT).show();
-//        } else {
-//            copyDatabase();
-//        }
-//    }
-
-//    public void copyDatabase() {
-//        this.getReadableDatabase();
-//        try {
-//            //Open your local db as the input stream
-//            InputStream myinput = mcontext.getAssets().open(dbName);
-//
-//            // Path to the just created empty db
-//            String outfilename = dbPath + dbName;
-//
-//            //Open the empty db as the output stream
-//            OutputStream myoutput = new FileOutputStream(outfilename);
-//
-//            // transfer byte to inputfile to outputfile
-//            byte[] buffer = new byte[1024];
-//            int length;
-//            while ((length = myinput.read(buffer))>0) {
-//                myoutput.write(buffer,0,length);
-//            }
-//
-//            //Close the streams
-//            myoutput.flush();
-//            myoutput.close();
-//            myinput.close();
-//
-//
-//            Log.d("CopyDb", "DataBase Copied");
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            Log.d("exception","copy");
-//        }
-//
-//    }
-
-//    public void OpenDatabase() {
-//        String filepath = dbPath + dbName;
-//        SQLiteDatabase.openDatabase(filepath, null, 0);
-//    }
-
-
-    //get surah name
     public ArrayList<String> getAllSurah() {
         SQLiteDatabase db=this.getReadableDatabase();
         String select_query="SELECT * FROM "+ " tsurah" ;
@@ -176,11 +104,7 @@ class DbHelper extends SQLiteOpenHelper {
         Cursor cursor=db.rawQuery(select_query,null);
         int id=-1;
         if(cursor.moveToFirst()){
-
-
              id = cursor.getInt(0);
-
-
         }
         cursor.close();
         return id;
@@ -263,8 +187,6 @@ class DbHelper extends SQLiteOpenHelper {
         SQLiteDatabase db=this.getReadableDatabase();
         String select_query="SELECT * FROM "+ "tayah where FatehMuhammadJalandhrield Like '%"+input +"%' OR DrMohsinKhan LIKE '%"+input +"%' OR ArabicText LIKE '%"+input+"%'";
         Log.d("input", input);
-//        ArabicNormalizer an= new ArabicNormalizer(input);
-//        input=an.getOutput();
         Cursor cursor=db.rawQuery(select_query,null);
         int count=0;
         if(cursor.moveToFirst()){

@@ -15,7 +15,6 @@ import java.util.List;
 
 public class BookActivity extends AppCompatActivity {
     ListView lv;
-    TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +22,8 @@ public class BookActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),"ALL SURAH",Toast.LENGTH_LONG).show();
         DbHelper db= new DbHelper(BookActivity.this);
         lv = findViewById(R.id.SurahNames);
-        List<String> surahNames=  db.getAllSurah();
-        ArrayAdapter<String> AA= new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,surahNames);
+        List<String> surahNames =  db.getAllSurah();
+        ArrayAdapter<String> AA = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,surahNames);
         lv.setAdapter(AA);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

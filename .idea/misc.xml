@@ -4,9 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Anns/Desktop/MC/MC_QuranApp/App/app/src/main/res/layout/activity_book.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Anns/Desktop/MC/MC_QuranApp/App/app/src/main/res/layout/activity_complete_parah.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Anns/Desktop/MC/MC_QuranApp/App/app/src/main/res/layout/activity_display_para.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Anns/Desktop/MC/MC_QuranApp/App/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Anns/Desktop/MC/MC_QuranApp/App/app/src/main/res/layout/activity_parah.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Anns/Desktop/MC/MC_QuranApp/App/app/src/main/res/layout/activity_search_result.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Anns/Desktop/MC/MC_QuranApp/App/app/src/main/res/layout/activity_searching.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Anns/Desktop/MC/MC_QuranApp/App/app/src/main/res/layout/customizedview.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Anns/Desktop/MC/MC_QuranApp/App/app/src/main/res/layout/header.xml" value="0.33" />
-        <entry key="..\:/Users/Anns/Desktop/MC/MC_QuranApp/App/app/src/main/res/menu/main_menu.xml" value="0.34270833333333334" />
+        <entry key="..\:/Users/Anns/Desktop/MC/MC_QuranApp/App/app/src/main/res/layout/mainbar.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Anns/Desktop/MC/MC_QuranApp/App/app/src/main/res/menu/main_menu.xml" value="0.1" />
         <entry key="..\:/Users/qadil/AndroidStudioProjects/QuranAppWithNotificationAndDb/NavigationDrawer/app/src/main/res/drawable/add_comment.xml" value="0.249" />
         <entry key="..\:/Users/qadil/AndroidStudioProjects/QuranAppWithNotificationAndDb/NavigationDrawer/app/src/main/res/drawable/book.xml" value="0.249" />
         <entry key="..\:/Users/qadil/AndroidStudioProjects/QuranAppWithNotificationAndDb/NavigationDrawer/app/src/main/res/drawable/chrome_reader.xml" value="0.249" />

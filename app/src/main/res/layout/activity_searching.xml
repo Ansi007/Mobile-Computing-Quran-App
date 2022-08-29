@@ -8,31 +8,35 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="248dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="81dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="82dp"
-        android:text="Type Word Or Sentence then click Search"
+        android:text="Search By Word"
+        android:textAlignment="center"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/Input"
-        android:layout_width="244dp"
-        android:layout_height="0dp"
+        android:layout_width="275dp"
+        android:layout_height="48dp"
         android:layout_marginStart="74dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="168dp"
         android:layout_marginEnd="93dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Enter Word"
         android:textIsSelectable="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/Search"
@@ -45,7 +49,39 @@
         android:text="Search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Input" />
+        app:layout_constraintTop_toBottomOf="@+id/Input"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="لفظ کے ذریعہ تلاش کریں۔"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/Input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.221" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="البحث بالكلمة"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/Input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.684" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
