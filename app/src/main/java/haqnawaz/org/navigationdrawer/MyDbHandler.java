@@ -154,13 +154,15 @@ class DbHelper extends SQLiteOpenHelper {
 
         ArrayList<tayah> t= new ArrayList<tayah>();
         SQLiteDatabase db=this.getReadableDatabase();
-        String select_query="SELECT * FROM "+ "tayah where SuraID="+id;
+        String select_query="SELECT * FROM "+ " tayah where SuraID="+id;
         Cursor cursor=db.rawQuery(select_query,null);
         if(cursor.moveToFirst()){
             do {
-                if(cursor!=null)
+                if(cursor != null)
                 {
-                    tayah e= new tayah(cursor.getInt(0),cursor.getInt(1),cursor.getString(3),cursor.getString(4),cursor.getString(6),cursor.getInt(10),cursor.getInt(8));
+                    int engT = 6 + SettingsValue.ENGLISH_TRANSLATION;
+                    int urduT = 4  + SettingsValue.URDU_TRANSLATION;
+                    tayah e = new tayah(cursor.getInt(0),cursor.getInt(1),cursor.getString(3),cursor.getString(urduT),cursor.getString(engT),cursor.getInt(10),cursor.getInt(8));
                     t.add(e);
                 }
             } while (cursor.moveToNext());
@@ -171,7 +173,7 @@ class DbHelper extends SQLiteOpenHelper {
     {
         ArrayList<tayah> t= new ArrayList<tayah>();
         SQLiteDatabase db=this.getReadableDatabase();
-        String select_query="SELECT * FROM "+ "tayah where FatehMuhammadJalandhrield Like '%"+input +"%' OR DrMohsinKhan LIKE '%"+input +"%' OR ArabicText LIKE '%"+input+"%'";
+        String select_query = "SELECT * FROM " + " tayah where FatehMuhammadJalandhrield Like '%"+input +"%' OR DrMohsinKhan LIKE '%"+input +"%' OR ArabicText LIKE '%"+input+"%'";
         Log.d("input", input);
         Cursor cursor=db.rawQuery(select_query,null);
         int count=0;

@@ -23,6 +23,10 @@
             android:id="@+id/nav_SearchBySurahNo"
             android:icon="@drawable/returrn"
             android:title="Find Surah" />
+        <item
+            android:id="@+id/nav_Settings"
+            android:icon="@android:drawable/ic_secure"
+            android:title="Settings" />
 
 
     </group>

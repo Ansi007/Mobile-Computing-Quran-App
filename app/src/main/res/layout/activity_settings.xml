@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="9dp">
+
+    <TextView
+        android:id="@+id/textViewEnglish"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="262dp"
+        android:text="Select Urdu Translation"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEnglish2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEnglish">
+
+        <RadioButton
+            android:id="@+id/radioUrdu1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Fateh Muhammad Jalandhrield"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_conversion_absoluteWidth="117dp"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="307dp" />
+
+        <RadioButton
+            android:id="@+id/radioUrdu2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Mehmoodul Hassan "
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_conversion_absoluteWidth="117dp"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="355dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewEnglish2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="400dp"
+        android:text="Select English Translation"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="323dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="239dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewEnglish2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEnglish">
+
+        <RadioButton
+            android:id="@+id/radioEng1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Dr Mohsin Khan " />
+
+        <RadioButton
+            android:id="@+id/radioEng2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Mufti Taqi Usmani " />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

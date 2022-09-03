@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NavigationDrawer">
         <activity
+            android:name=".Settings"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".completeParah"
             android:exported="false" />
         <activity
