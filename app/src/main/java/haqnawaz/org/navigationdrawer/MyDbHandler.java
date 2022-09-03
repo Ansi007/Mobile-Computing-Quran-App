@@ -115,7 +115,6 @@ class DbHelper extends SQLiteOpenHelper {
         ArrayList<tayah> t= new ArrayList<tayah>();
         SQLiteDatabase db=this.getReadableDatabase();
         String select_query="SELECT * FROM "+ "tayah where RakuID="+id;
-
         Cursor cursor=db.rawQuery(select_query,null);
 
         if(cursor.moveToFirst()){
@@ -124,10 +123,7 @@ class DbHelper extends SQLiteOpenHelper {
                 {
                     tayah e= new tayah(cursor.getInt(0),cursor.getInt(1),cursor.getString(3),cursor.getString(4),cursor.getString(6),cursor.getInt(10),cursor.getInt(8));
                     t.add(e);
-
                 }
-
-
             } while (cursor.moveToNext());
         }
         return t;
@@ -139,20 +135,15 @@ class DbHelper extends SQLiteOpenHelper {
         ArrayList<tayah> t= new ArrayList<tayah>();
         SQLiteDatabase db=this.getReadableDatabase();
         String select_query="SELECT * FROM "+ "tayah where ParaID="+id;
-
         Cursor cursor=db.rawQuery(select_query,null);
 
         if(cursor.moveToFirst()){
             do {
                 if(cursor!=null)
                 {
-
                     tayah e= new tayah(cursor.getInt(0),cursor.getInt(1),cursor.getString(3),cursor.getString(4),cursor.getString(6),cursor.getInt(10),cursor.getInt(8));
                     t.add(e);
-
                 }
-
-
             } while (cursor.moveToNext());
         }
         return t;
@@ -164,19 +155,14 @@ class DbHelper extends SQLiteOpenHelper {
         ArrayList<tayah> t= new ArrayList<tayah>();
         SQLiteDatabase db=this.getReadableDatabase();
         String select_query="SELECT * FROM "+ "tayah where SuraID="+id;
-
         Cursor cursor=db.rawQuery(select_query,null);
-
         if(cursor.moveToFirst()){
             do {
                 if(cursor!=null)
                 {
                     tayah e= new tayah(cursor.getInt(0),cursor.getInt(1),cursor.getString(3),cursor.getString(4),cursor.getString(6),cursor.getInt(10),cursor.getInt(8));
                     t.add(e);
-
                 }
-
-
             } while (cursor.moveToNext());
         }
         return t;

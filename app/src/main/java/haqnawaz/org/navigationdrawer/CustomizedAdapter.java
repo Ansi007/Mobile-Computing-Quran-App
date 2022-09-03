@@ -28,8 +28,8 @@ public class CustomizedAdapter extends ArrayAdapter<tayah> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-       tayah cur=getItem(position);
-       convertView= LayoutInflater.from(getContext()).inflate(R.layout.customizedview,parent,false);
+        tayah cur=getItem(position);
+        convertView= LayoutInflater.from(getContext()).inflate(R.layout.customizedview,parent,false);
         TextView ayahId=convertView.findViewById(R.id.ayahid);
         TextView SurahId=convertView.findViewById(R.id.surahid);
         TextView RukuId=convertView.findViewById(R.id.RukuId);
