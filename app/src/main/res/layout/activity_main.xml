@@ -13,6 +13,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/wallp" />
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -26,13 +32,13 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
-        android:layout_gravity="start"
-        android:layout_height="match_parent"
         android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:visibility="visible"
         app:headerLayout="@layout/header"
         app:menu="@menu/main_menu"
         tools:ignore="MissingConstraints" />
-
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

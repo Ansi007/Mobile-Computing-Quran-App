@@ -57,10 +57,10 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this, BookActivity.class);
                         startActivity(intent);
                         break;
-                    case R.id.nav_Parah:
-                        Intent intent1 = new Intent(MainActivity.this, ParahActivity.class);
-                        startActivity(intent1);
-                        break;
+//                    case R.id.nav_Parah:
+//                        Intent intent1 = new Intent(MainActivity.this, ParahActivity.class);
+//                        startActivity(intent1);
+//                        break;
                     case R.id.nav_return :
                         Intent intent2 = new Intent(MainActivity.this, Searching.class);
                         intent2.putExtra("Search","Search");
