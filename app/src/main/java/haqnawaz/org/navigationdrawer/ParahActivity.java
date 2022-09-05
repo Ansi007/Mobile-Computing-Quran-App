@@ -91,7 +91,7 @@ public class ParahActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(ParahActivity.this, completeParah.class);
-                intent.putExtra("ParahId", i);
+                intent.putExtra("ParahId", i + 1);
                 startActivity(intent);
             }
         });

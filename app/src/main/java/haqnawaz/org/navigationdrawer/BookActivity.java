@@ -24,7 +24,6 @@ public class BookActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
-        Toast.makeText(getApplicationContext(),"ALL SURAH",Toast.LENGTH_LONG).show();
         DbHelper db= new DbHelper(BookActivity.this);
         recyclerView = findViewById(R.id.recyclerView);
         ArrayList<SurahDetails> surahNames =  db.getSurahDetails();
