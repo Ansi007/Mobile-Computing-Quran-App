@@ -181,7 +181,9 @@ class DbHelper extends SQLiteOpenHelper {
             do {
                 if(cursor!=null)
                 {
-                    tayah e= new tayah(cursor.getInt(0),cursor.getInt(1),cursor.getString(3),cursor.getString(4),cursor.getString(6),cursor.getInt(10),cursor.getInt(8));
+                    int engT = 6 + SettingsValue.ENGLISH_TRANSLATION;
+                    int urduT = 4  + SettingsValue.URDU_TRANSLATION;
+                    tayah e = new tayah(cursor.getInt(0),cursor.getInt(1),cursor.getString(3),cursor.getString(urduT),cursor.getString(engT),cursor.getInt(10),cursor.getInt(8));
                     t.add(e);
 
                 }

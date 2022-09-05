@@ -84,7 +84,6 @@ public class ParahActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parah);
-        Toast.makeText(getApplicationContext(),"ALL SURAH",Toast.LENGTH_LONG).show();
         lv = findViewById(R.id.parahNamesList);
         ArrayAdapter<String> AA = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,ParahName);
         lv.setAdapter(AA);
