@@ -8,8 +8,8 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="2dp">
 
-    <ListView
-        android:id="@+id/SurahNames"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

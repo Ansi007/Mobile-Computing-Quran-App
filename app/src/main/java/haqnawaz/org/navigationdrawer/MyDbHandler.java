@@ -141,7 +141,7 @@ class DbHelper extends SQLiteOpenHelper {
             do {
                 if(cursor!=null)
                 {
-                    tayah e= new tayah(cursor.getInt(0),cursor.getInt(1),cursor.getString(3),cursor.getString(4),cursor.getString(6),cursor.getInt(10),cursor.getInt(8));
+                    tayah e = new tayah(cursor.getInt(0),cursor.getInt(1),cursor.getString(3),cursor.getString(4),cursor.getString(6),cursor.getInt(10),cursor.getInt(8));
                     t.add(e);
                 }
             } while (cursor.moveToNext());
@@ -193,4 +193,25 @@ class DbHelper extends SQLiteOpenHelper {
         return t;
     }
 
+    public ArrayList<SurahDetails> getSurahDetails() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String select_query = "SELECT * FROM "+ " tsurah" ;
+        //cursor maybe acts as cursor to table row at start it is at first row
+        Cursor cursor = db.rawQuery(select_query,null);
+        ArrayList<SurahDetails> surahList = new ArrayList<>();
+        if(cursor.moveToFirst()){
+            do {
+                if(cursor.getString(2) != null)
+                {
+                    SurahDetails detail = new SurahDetails(cursor.getString(0),
+                            cursor.getString(2),cursor.getString(4),
+                            cursor.getString(3));
+                    surahList.add(detail);
+                }
+
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return surahList;
+    }
 }
