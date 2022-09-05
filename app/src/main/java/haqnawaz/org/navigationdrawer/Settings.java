@@ -19,6 +19,20 @@ public class Settings extends AppCompatActivity {
         eng2 = findViewById(R.id.radioEng2);
         urdu1 = findViewById(R.id.radioUrdu1);
         urdu2 = findViewById(R.id.radioUrdu2);
+        if(SettingsValue.URDU_TRANSLATION == 0) {
+            urdu1.setChecked(true);
+        }
+        else {
+            urdu2.setChecked(true);
+        }
+
+        if(SettingsValue.ENGLISH_TRANSLATION == 0) {
+            eng1.setChecked(true);
+        }
+        else {
+            eng2.setChecked(true);
+        }
+
         eng1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {

@@ -2,18 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#303030"
+    android:background="#D8AEAE"
     android:orientation="vertical">
 
     <ImageView
         android:layout_width="125dp"
         android:layout_height="125dp"
+        android:layout_marginLeft="80dp"
         android:background="@color/black"
         android:src="@drawable/quranicon" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
         android:text="Quran App"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
