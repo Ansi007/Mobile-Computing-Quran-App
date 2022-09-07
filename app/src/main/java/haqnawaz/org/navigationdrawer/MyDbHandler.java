@@ -109,26 +109,7 @@ class DbHelper extends SQLiteOpenHelper {
         cursor.close();
         return id;
     }
-    public ArrayList<tayah> SearchByRukuNo(String input)
-    {
-        int id= Integer.parseInt(input);
-        ArrayList<tayah> t= new ArrayList<tayah>();
-        SQLiteDatabase db=this.getReadableDatabase();
-        String select_query="SELECT * FROM "+ "tayah where RakuID="+id;
-        Cursor cursor=db.rawQuery(select_query,null);
-
-        if(cursor.moveToFirst()){
-            do {
-                if(cursor!=null)
-                {
-                    tayah e= new tayah(cursor.getInt(0),cursor.getInt(1),cursor.getString(3),cursor.getString(4),cursor.getString(6),cursor.getInt(10),cursor.getInt(8));
-                    t.add(e);
-                }
-            } while (cursor.moveToNext());
-        }
-        return t;
-    }
-
+    
     public ArrayList<tayah> SearchByParaNo(String input)
     {
         int id= Integer.parseInt(input);

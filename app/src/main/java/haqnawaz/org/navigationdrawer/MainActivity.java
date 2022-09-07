@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        DbHelper d= new DbHelper(MainActivity.this);
+        DbHelper d = new DbHelper(MainActivity.this);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         navigationView=findViewById(R.id.nav_view);
@@ -78,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
                 return true;
-                /////// New Commmit
             }
         });
 
