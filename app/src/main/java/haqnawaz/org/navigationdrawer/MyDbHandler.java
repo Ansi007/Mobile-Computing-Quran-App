@@ -61,15 +61,12 @@ class DbHelper extends SQLiteOpenHelper {
     private void copyDataBase(String dbPath) {
         try {
             InputStream assestDB = mycontext.getAssets().open(dbName);
-
             OutputStream appDB = new FileOutputStream(dbPath, false);
-
             byte[] buffer = new byte[1024];
             int length;
             while ((length = assestDB.read(buffer)) > 0) {
                 appDB.write(buffer, 0, length);
             }
-
             appDB.flush();
             appDB.close();
             assestDB.close();
@@ -78,6 +75,7 @@ class DbHelper extends SQLiteOpenHelper {
         }
 
     }
+
     public ArrayList<String> getAllSurah() {
         SQLiteDatabase db=this.getReadableDatabase();
         String select_query="SELECT * FROM "+ " tsurah" ;
@@ -99,7 +97,7 @@ class DbHelper extends SQLiteOpenHelper {
 
     public int getSurahIdBySurahName(String name){
         SQLiteDatabase db=this.getReadableDatabase();
-        String select_query="SELECT * FROM "+ " tsurah where SurahNameU= '"+name+"'" ;
+        String select_query="SELECT * FROM "+ " tsurah where SurahNameU= '" + name + "'" ;
         //cursor maybe acts as cursor to table row at start it is at first row
         Cursor cursor=db.rawQuery(select_query,null);
         int id=-1;
@@ -109,13 +107,13 @@ class DbHelper extends SQLiteOpenHelper {
         cursor.close();
         return id;
     }
-    
+
     public ArrayList<tayah> SearchByParaNo(String input)
     {
         int id= Integer.parseInt(input);
         ArrayList<tayah> t= new ArrayList<tayah>();
         SQLiteDatabase db=this.getReadableDatabase();
-        String select_query="SELECT * FROM "+ "tayah where ParaID="+id;
+        String select_query="SELECT * FROM "+ "tayah where ParaID = "+id;
         Cursor cursor=db.rawQuery(select_query,null);
 
         if(cursor.moveToFirst()){
